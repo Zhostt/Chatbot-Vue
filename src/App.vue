@@ -1,11 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <div>ТАК УСТАВАТЬ НЕЛЬЗЯ</div>
+  <MessageList />
+  <QuestionSelector />
 </template>
 
 <script>
-export default {
+import MessageList from './components/MessageList.vue'
+import QuestionSelector from './components/QuestionSelector.vue'
 
+export default {
+  components: {MessageList, QuestionSelector},
 }
 </script>
 
