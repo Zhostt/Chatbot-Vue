@@ -54,6 +54,11 @@
         display: flex;
         justify-content: center; 
         align-items: center; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 0% 10%;
+
     }
     .question-button {
         width: 100%;

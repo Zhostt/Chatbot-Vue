@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="message-window">
-      <div class="row">
+      <div class="d-flex flex-row justify-content-start mb-4">
         <div class="col-md-8 offset-md-2">
           <div 
-            :class="['message','bg-light', 'p-3', message.author]"
+            :class="['message','bg-light', 'p-1', message.author]"
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
