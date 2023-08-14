@@ -16,7 +16,12 @@ export default createStore({
           {id: 'alarm', author: 'bot', text: 'Я позабочусь, чтобы вы не проспали! Что-нибудь еще?'},
           {id: 'weather', author: 'bot', text: 'Наилучшая для выполнения тестовых заданий! Что-нибудь еще?'},
           {id: 'otherQuestions', author: 'bot', text: 'Здесь  могла быть менюшка с расширенным списком вопросов и поиском по ним, но я слишком прост для таких вещей! Спасибо за внимание!'},
-        ]
+        ],
+        images: {
+          bot: {alt: 'Bot avatar', src: '/avatars/Bot.svg'},
+          user: {alt: 'User avatar', src: '/avatars/User.svg'},
+        }
+        
     },
 
     mutations: {

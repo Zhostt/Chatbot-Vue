@@ -1,14 +1,17 @@
 <template>
-    <div class="user-questions">
-        <div 
-            class="question" 
-            v-for="question in this.$store.state.possibleQuestions" 
-            v-bind:key="question.id"
-        >
-            <button class="question button" @click="handleQuestion(question)">{{ question.text }}</button>
+    <div class="container">
+        <div class="user-questions">
+            <div class="row justify-content-center">
+                <div 
+                    class="question col-lg-3 col-md-4 col-sm-6 col-6" 
+                    v-for="question in this.$store.state.possibleQuestions" 
+                    v-bind:key="question.id"
+                >
+                    <button class="question btn btn-primary question-button" @click="handleQuestion(question)">{{ question.text }}</button>
+                </div>
+            </div>  
         </div>
     </div>
-    
 </template>
 
 <script>
@@ -24,8 +27,10 @@
                         id,
                         author: 'user',
                     }
-                    this.addUserMessage(newMessage)
-                    this.addBotMessage(newMessage)
+                    
+                    setTimeout((() => this.addUserMessage(newMessage)),200)
+                    setTimeout((() => this.addBotMessage(newMessage)),500)
+                    
             },
 
 
@@ -45,5 +50,14 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .user-questions {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .question-button {
+        width: 100%;
+        margin-bottom: 10px;
+        min-height: 4rem;
+     }
 </style>
