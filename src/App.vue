@@ -1,11 +1,16 @@
 <template>
   <div class="container">
-    <h1 class="header row">Vue Chatbot</h1>
-    <div class="chat-window mx-1 col-10">
+  <div class="row justify-content-center ">
+    <h1 class="header">Vue Chatbot by Zhostt</h1>
+    <div class="chat-window py-4 col-12 col-md-12 col-lg-6 ">
       <MessageList/>
+    </div>
+    <div class="questions-background w-100 position-fixed bottom-0">
+      <div class="questions-block col-12 col-md-12 col-xl-6 "></div>
       <QuestionSelector/>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -27,17 +32,20 @@ export default {
   color: #2c3e50;
 }
 
-
 .chat-window {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  overflow-y: scroll;
   width: 70%;
-  min-height: 80%;
-  max-height: 80%;
+  height: 80%;
+}
+
+.questions-background {
+  background-color: rgb(216, 233, 238);
+  border-top: 1px solid #333 ;
+}
+
+.header {
+  position: fixed; 
+  background-color: rgb(216, 233, 238);
+  border-bottom: 1px solid #333 ;
+  text-align: center;
 }
 </style>

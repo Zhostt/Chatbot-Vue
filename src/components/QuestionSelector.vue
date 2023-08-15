@@ -1,9 +1,8 @@
 <template>
     <div class="container">
-        <div class="user-questions">
-            <div class="row justify-content-center">
+        <div class="user-questions row">
                 <div 
-                    class="question col-lg-3 col-md-6 col-sm-6 col-12 " 
+                    class="question col-10 col-md-6" 
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
@@ -11,7 +10,6 @@
                 </div>
             </div>  
         </div>
-    </div>
 </template>
 
 <script>
@@ -54,12 +52,15 @@
         justify-content: center; 
         align-items: center; 
         margin-bottom: 1em;
+        padding:1em 0;
     }
     .question-button {
         width: 100%;
         margin-bottom: 5px;
-        max-height: 4em;
-        min-width: 10em;
+        height: 3.5em;
+        max-height: 6em;
+        border-radius: 3em;
+
      }
      .question-button:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
