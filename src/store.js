@@ -6,10 +6,10 @@ export default createStore({
           {text: 'Здравствуйте, чем могу помочь?', author: 'bot', id: 1}, 
         ],
         possibleQuestions: [
-          {id: 'pizza', text: 'Заказать пиццу', author: 'user'},
-          {id: 'alarm', text: 'Установить будильник', author: 'user'},
-          {id: 'weather', text: 'Узнать погоду на завтра', author: 'user'},
-          {id: 'otherQuestions', text: 'Другие вопросы', author: 'user'},
+          {id: 'pizza', text: 'Пицца', author: 'user'},
+          {id: 'alarm', text: 'Будильник', author: 'user'},
+          {id: 'weather', text: 'Погода', author: 'user'},
+          {id: 'otherQuestions', text: 'Другое', author: 'user'},
         ],
         possibleAnswers: [
           {id: 'pizza', author: 'bot', text: 'Пицца уже готовится! Что-нибудь еще?'},

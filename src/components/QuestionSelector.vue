@@ -7,7 +7,7 @@
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
-                    <button class="question btn btn-secondary question-button" @click="handleQuestion(question)">{{ question.text }}</button>
+                    <button class="question btn btn-dark question-button" @click="handleQuestion(question)">{{ question.text }}</button>
                 </div>
             </div>  
         </div>
@@ -57,8 +57,11 @@
     }
     .question-button {
         width: 100%;
-        margin-bottom: 10px;
-        min-height: 4rem;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
+        max-height: 4em;
+        min-width: 10em;
+     }
+     .question-button:hover {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
      }
 </style>

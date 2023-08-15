@@ -1,15 +1,11 @@
 <template>
   <div class="container">
-  <div class="row">
-    <h1>Тренировочный чат-бот</h1>
+    <h1 class="header row">Vue Chatbot</h1>
     <div class="chat-window mx-1 col-10">
       <MessageList/>
       <QuestionSelector/>
     </div>
   </div>
-  </div>
-
-
 </template>
 
 <script>

@@ -6,11 +6,11 @@
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
-            <img class="avatar mx-3 "
+            <img class="avatar m-1 "
               :src="this.$store.state.images[message.author].src" 
               :alt="this.$store.state.images[message.author].alt">
             <div class="message message-body">
-              <p class="m-1 p-5 bg-light rounded">{{ message.text }}</p></div>
+              <p class="m-2 p-3 bg-light rounded">{{ message.text }}</p></div>
             </div>
       </div>
     </div>
