@@ -1,44 +1,39 @@
 <template>
   <div class="container">
-    <div class="message-window">
-      <div class="d-flex flex-row justify-content-start mb-4">
-        <div class="col-md-8 offset-md-2">
+    <div class="message-window row justify-content-center" ref="messageContainer">
           <div 
-            :class="['message','bg-light', 'p-1', message.author]"
+            :class="['message', 'mb-3', 'p-6', message.author]"
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
-            <img class="avatar mr-3"
+            <img class="avatar mx-3 "
               :src="this.$store.state.images[message.author].src" 
               :alt="this.$store.state.images[message.author].alt">
-            <div class="message message-body">{{ message.text }}</div>
-        </div>
+            <div class="message message-body">
+              <p class="m-1 p-5 bg-light rounded">{{ message.text }}</p></div>
+            </div>
       </div>
     </div>
-  </div>
-  </div>   
 </template>
 
 <script>
   // eslint-disable-next-line no-unused-vars
   // import store from '../store.js'
   export default {
-      
+    
     }
+    
 </script>
 
 <style lang="scss" scoped>
   .message {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    border: 0.1em solid #ccc;
-    border-radius: 0.5rem;
   }
+
   .avatar {
-    width: 30%;
-    max-width: 70px;
+    width: 20%;
+    max-width: 5em;
     height: auto;
   }
 

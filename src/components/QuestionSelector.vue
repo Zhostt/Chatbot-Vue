@@ -3,11 +3,11 @@
         <div class="user-questions">
             <div class="row justify-content-center">
                 <div 
-                    class="question col-lg-3 col-md-4 col-sm-6 col-6" 
+                    class="question col-lg-3 col-md-6 col-sm-6 col-12 " 
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
-                    <button class="question btn btn-primary question-button" @click="handleQuestion(question)">{{ question.text }}</button>
+                    <button class="question btn btn-secondary question-button" @click="handleQuestion(question)">{{ question.text }}</button>
                 </div>
             </div>  
         </div>
@@ -30,7 +30,6 @@
                     
                     setTimeout((() => this.addUserMessage(newMessage)),200)
                     setTimeout((() => this.addBotMessage(newMessage)),500)
-                    
             },
 
 
@@ -43,8 +42,8 @@
                 const botAnswer = this.$store.getters.getPossibleAnswers
                                 .find(answer => answer.id === questionId)
                 this.$store.commit('addMessage', botAnswer)
-            }
-        }
+            },
+            },
   }
 
 </script>
@@ -54,15 +53,12 @@
         display: flex;
         justify-content: center; 
         align-items: center; 
-        position: absolute;
-        left: 0;
-        right: 0;
-        padding: 0% 10%;
-
+        margin-bottom: 1em;
     }
     .question-button {
         width: 100%;
         margin-bottom: 10px;
         min-height: 4rem;
+        margin-bottom: 3px;
      }
 </style>
