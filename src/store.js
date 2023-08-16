@@ -18,8 +18,8 @@ export default createStore({
           {id: 'otherQuestions', author: 'bot', text: 'Здесь  могла быть менюшка с расширенным списком вопросов и поиском по ним, но я слишком прост для таких вещей! Спасибо за внимание!'},
         ],
         images: {
-          bot: {alt: 'Bot avatar', src: '/avatars/Bot.svg'},
-          user: {alt: 'User avatar', src: '/avatars/User.svg'},
+          bot: {alt: 'Bot avatar', src: '/avatars/BotGreen.svg'},
+          user: {alt: 'User avatar', src: '/avatars/UserBlack.svg'},
         }
         
     },

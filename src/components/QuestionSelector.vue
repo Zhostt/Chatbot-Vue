@@ -1,13 +1,20 @@
 <template>
-    <div class="container">
-        <div class="user-questions row">
+    <div class="container questions">
+        <div class="user-questions row justify-content-center">
+            <div class="col-lg-8">
+            <div class="row ">
                 <div 
-                    class="question col-10 col-md-6" 
+                    class="question col-12  col-s-6 col-md-3 " 
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
-                    <button class="question btn btn-dark question-button" @click="handleQuestion(question)">{{ question.text }}</button>
+                    <button class="question btn question-button" role="'button" @click="handleQuestion(question)">{{ question.text }}</button>
                 </div>
+            </div>
+            </div>
+                
+
+               
             </div>  
         </div>
 </template>
@@ -47,22 +54,21 @@
 </script>
 
 <style lang="scss" scoped>
+    .container{
+        width: 100%;
+    }
     .user-questions {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
         margin-bottom: 1em;
         padding:1em 0;
     }
     .question-button {
-        width: 100%;
+        border: 2px solid #B9E52F;
+        width: 110%;
         margin-bottom: 5px;
-        height: 3.5em;
-        max-height: 6em;
+        height: 3em;
         border-radius: 3em;
-
      }
      .question-button:hover {
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #B9E52F;
      }
 </style>
