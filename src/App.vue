@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-  <div class="row d-flex justify-content-center  align-items-end  vh-100">
+  <div class="row justify-content-center  align-items-end  vh-100">
     <img class="welcome-image mt-5 mb-3" src="/avatars/Welcome-face.svg" alt="Welcome-face">
     <h4 class="welcome">Vue chat-bot by Zhostt</h4>
-    <div class="chat-window col-12 col-lg-10 mt-3">
+    <div class="chat-window col-12 col-lg-8 mt-3 p-0">
       <MessageList/>
       <QuestionSelector/>
     </div>
@@ -46,6 +46,7 @@ text-align: center;
   background-color: white;
   overflow-y: scroll;
   border-radius: 2em 2em 0 0;
+  width: 90%
 }
 
 ::-webkit-scrollbar {
