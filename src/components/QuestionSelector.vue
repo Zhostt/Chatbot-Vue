@@ -31,8 +31,7 @@
                         text,
                         id,
                         author: 'user',
-                    }
-                    
+                    } 
                     setTimeout((() => this.addUserMessage(newMessage)),100)
                     setTimeout((() => this.addBotMessage(newMessage)),200)
                     setTimeout((() => this.scrollToElement()),300)
@@ -50,8 +49,7 @@
                                 .find(answer => answer.id === questionId)
                 this.$store.commit('addMessage', botAnswer)
             },
-
-
+            
             scrollToElement() {
                 const el = this.$refs.scrollToMe;
                 console.log(el)
@@ -70,15 +68,15 @@
         width: 100%;
     }
     .user-questions {
-        margin-bottom: 1em;
-        padding: 1em 0;
+        padding-top: 2em;
     }
     .question-button {
         border: 2px solid #B9E52F;
         min-width: 100%;
         margin-bottom: 5px;
         height: 3em;
-        border-radius: 3em;
+        border-radius: 2em;
+        padding: 0;
         }
      .question-button:hover {
         background-color: #B9E52F;

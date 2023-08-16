@@ -1,8 +1,8 @@
 <template>
   <div class="container messages">
-    <div class="message-window row">
+    <div class="message-window row ">
           <div 
-            :class="['message', 'col-12', 'col-lg-8', 'justify-content-center', message.author]"
+            :class="['message', 'col-12', 'col-lg-8', 'text-alig-center', message.author]"
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
   .message {
     display: flex;
@@ -41,6 +42,7 @@
   .avatar {
     min-width: 2em;
     max-width: 3em;
+    float: bottom;
   }
 
   .user{
@@ -57,11 +59,10 @@
   .user>.message-body>.message-text{
     background-color: #333;
     color: #B9E52F;
-    width: auto;
     float: right;
     border-radius: 1em 1em 0em 1em;
   }
-  @media screen and (min-width: 0px) and (max-width: 480px){
+  @media screen and (min-width: 0px) and (max-width: 300px){
     .message-text {
       margin: 0em;
       margin-bottom: 1em;
