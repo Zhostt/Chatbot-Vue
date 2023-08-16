@@ -11,7 +11,7 @@
               :alt="this.$store.state.images[message.author].alt">
             <div class="message-body col-10">
               <p class="message-text">{{ message.text }}</p></div>
-              <div class="col-2 avatar"></div>
+              <div class="col-2 avatar avatar-dumper"></div>
             </div>
 
       </div>
@@ -61,4 +61,11 @@
     float: right;
     border-radius: 1em 1em 0em 1em;
   }
+  @media screen and (min-width: 0px) and (max-width: 480px){
+    .message-text {
+      margin: 0em;
+      margin-bottom: 1em;
+  }
+}
+  
 </style>

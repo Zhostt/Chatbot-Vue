@@ -1,6 +1,6 @@
 <template>
     <div class="container questions">
-        <div class="user-questions row justify-content-center">
+        <div class="user-questions row justify-content-center"  ref="scrollToMe">
             <div class="col-lg-8">
             <div class="row ">
                 <div 
@@ -8,7 +8,7 @@
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
-                    <button class="question btn question-button" role="'button" @click="handleQuestion(question)">{{ question.text }}</button>
+                    <button class="question btn question-button" role="button" @click="handleQuestion(question)">{{ question.text }}</button>
                 </div>
             </div>
             </div>
@@ -33,8 +33,10 @@
                         author: 'user',
                     }
                     
-                    setTimeout((() => this.addUserMessage(newMessage)),200)
-                    setTimeout((() => this.addBotMessage(newMessage)),500)
+                    setTimeout((() => this.addUserMessage(newMessage)),100)
+                    setTimeout((() => this.addBotMessage(newMessage)),200)
+                    setTimeout((() => this.scrollToElement()),300)
+                    
             },
 
 
@@ -48,7 +50,17 @@
                                 .find(answer => answer.id === questionId)
                 this.$store.commit('addMessage', botAnswer)
             },
-            },
+
+
+            scrollToElement() {
+                const el = this.$refs.scrollToMe;
+                console.log(el)
+                if (el) {
+                // Use el.scrollIntoView() to instantly scroll to the element
+                el.scrollIntoView({behavior: 'smooth'});
+                    }
+            },  
+    }
   }
 
 </script>
@@ -59,15 +71,15 @@
     }
     .user-questions {
         margin-bottom: 1em;
-        padding:1em 0;
+        padding: 1em 0;
     }
     .question-button {
         border: 2px solid #B9E52F;
-        width: 110%;
+        min-width: 100%;
         margin-bottom: 5px;
         height: 3em;
         border-radius: 3em;
-     }
+        }
      .question-button:hover {
         background-color: #B9E52F;
      }
