@@ -52,7 +52,6 @@
             
             scrollToElement() {
                 const el = this.$refs.scrollToMe;
-                console.log(el)
                 if (el) {
                 // Use el.scrollIntoView() to instantly scroll to the element
                 el.scrollIntoView({behavior: 'smooth'});
