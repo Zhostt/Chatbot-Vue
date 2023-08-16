@@ -1,20 +1,16 @@
 <template>
     <div class="container questions">
         <div class="user-questions row justify-content-center mb-3"  ref="scrollToMe">
-            <div class="col-lg-8">
-            <div class="row ">
+
+            <div class="row">
                 <div 
-                    class="question col-12  col-s-6 col-md-3 " 
+                    class="question col-12 col-s-6 col-md-3" 
                     v-for="question in this.$store.state.possibleQuestions" 
                     v-bind:key="question.id"
                 >
                     <button class="question btn question-button" role="button" @click="handleQuestion(question)">{{ question.text }}</button>
                 </div>
             </div>
-            </div>
-                
-
-               
             </div>  
         </div>
 </template>

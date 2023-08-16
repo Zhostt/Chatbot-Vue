@@ -3,7 +3,7 @@
   <div class="row justify-content-center  align-items-end  vh-100">
     <img class="welcome-image mt-5 mb-3" src="/avatars/Welcome-face.svg" alt="Welcome-face">
     <h4 class="welcome">Vue chat-bot by Zhostt</h4>
-    <div class="chat-window col-12 col-lg-8 mt-3 p-0">
+    <div class="chat-window mt-3 p-0 ">
       <MessageList/>
       <QuestionSelector/>
     </div>
@@ -28,7 +28,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  font-size: 14px;
+  font-size: 16px;
   background: linear-gradient(180deg,black 60%, grey 120%);
 }
 
@@ -51,6 +51,16 @@ text-align: center;
 
 ::-webkit-scrollbar {
     width: 12px;
+}
+@media screen and (min-width: 0px) {
+  .chat-window{
+    width: 100%
+  }
+}
+@media screen and (min-width: 860px) {
+    .chat-window{
+      width:  50%
+    }
 }
 
 </style>

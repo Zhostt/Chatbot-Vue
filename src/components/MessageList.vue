@@ -6,7 +6,7 @@
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
-            <img class="avatar col-2"
+            <img class="avatar col-3"
               :src="this.$store.state.images[message.author].src" 
               :alt="this.$store.state.images[message.author].alt">
             <div class="message-body">
@@ -37,11 +37,12 @@
 }
   .message {
     display: flex;
+    width: 100%;
   }
 
   .avatar {
-    min-width: 2em;
-    max-width: 3em;
+    min-width: 3em;
+    max-width: 3.5em;
   }
 
   .user{
