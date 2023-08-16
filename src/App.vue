@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-  <div class="row d-flex justify-content-center align-items-center vh-100">
-    <img class="welcome-face py-1" src="/avatars/BotGreen.svg" alt="Welcome-face">
-    <h2 class="welcome">Welcome to Vue chat-bot by Zhostt</h2>
-    <div class="chat-window col-12 col-lg-12">
+  <div class="row d-flex justify-content-center  align-items-end  vh-100">
+    <img class="welcome-image mt-5 mb-3" src="/avatars/Welcome-face.svg" alt="Welcome-face">
+    <h4 class="welcome">Vue chat-bot by Zhostt</h4>
+    <div class="chat-window col-12 col-lg-10 mt-3">
       <MessageList/>
       <QuestionSelector/>
     </div>
@@ -32,18 +32,17 @@ export default {
   background: linear-gradient(180deg,black 60%, grey 120%);
 }
 
-.welcome-face {
+.welcome-image {
   height: 10vh;
 }
 
 .welcome {
-color: rgb(216, 233, 238);
+color: #B9E52F;
 text-align: center;
 }
 
 .chat-window {
-  width: 70%;
-  height: 80%;
+  height: 75%;
   background-color: white;
   overflow-y: scroll;
   border-radius: 2em 2em 0 0;

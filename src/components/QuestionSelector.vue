@@ -1,6 +1,6 @@
 <template>
     <div class="container questions">
-        <div class="user-questions row justify-content-center"  ref="scrollToMe">
+        <div class="user-questions row justify-content-center mb-3"  ref="scrollToMe">
             <div class="col-lg-8">
             <div class="row ">
                 <div 
@@ -32,10 +32,14 @@
                         id,
                         author: 'user',
                     } 
+                    /*
                     setTimeout((() => this.addUserMessage(newMessage)),100)
                     setTimeout((() => this.addBotMessage(newMessage)),200)
                     setTimeout((() => this.scrollToElement()),300)
-                    
+                    */
+                    this.addUserMessage(newMessage)
+                    this.addBotMessage(newMessage)
+                    setTimeout((() => this.scrollToElement()),100)
             },
 
 

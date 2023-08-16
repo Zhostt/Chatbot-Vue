@@ -2,7 +2,7 @@
   <div class="container messages">
     <div class="message-window row ">
           <div 
-            :class="['message', 'col-12', 'col-lg-8', 'text-alig-center', message.author]"
+            :class="['message', 'col-12', 'col-lg-8', message.author]"
             v-for="message in this.$store.state.messages" 
             v-bind:key="message.id"
           > 
